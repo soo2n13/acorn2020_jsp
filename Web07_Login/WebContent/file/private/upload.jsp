@@ -1,7 +1,7 @@
+<%@page import="org.apache.commons.fileupload.FileItem"%>
 <%@page import="test.file.dao.FileDao"%>
 <%@page import="test.file.dto.FileDto"%>
 <%@page import="java.util.Map"%>
-<%@page import="org.apache.commons.fileupload.FileItem"%>
 <%@page import="java.util.List"%>
 <%@page import="java.io.File"%>
 <%@page import="org.apache.commons.fileupload.disk.DiskFileItemFactory"%>
@@ -89,6 +89,7 @@
                 }//if
             }//for
             //DB 에 파일 정보를 저장한다.
+            System.out.print(dto.getOrgFileName());
             isSuccess=FileDao.getInstance().insert(dto);
         }//if
         
